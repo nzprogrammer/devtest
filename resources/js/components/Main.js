@@ -46,6 +46,10 @@ class Main extends Component {
     handleChange(e) {
         let queryUrl = '/api/members?firstname=' + document.getElementById("firstname").value;
         queryUrl += '&surname=' + document.getElementById("surname").value;
+        queryUrl += '&email=' + document.getElementById("email").value;
+        console.log(document.getElementById("firstname").value);
+        console.log(document.getElementById("surname").value);
+        console.log(document.getElementById("email").value);
         fetch(queryUrl)
                 .then(response => {
                     return response.json();
@@ -59,6 +63,7 @@ class Main extends Component {
                     this.forceUpdate();
                 });
     };
+
     /*componentDidMount() is a lifecycle method
      * that gets called after the component is rendered
      */
@@ -203,7 +208,7 @@ class Main extends Component {
                                 <input type="text" id="surname" onChange={this.handleChange} placeholder="Last Name"/>
                             </td>
                             <td>
-                                <input type="text" id="email" placeholder="Email"/>
+                                <input type="text" id="email" onChange={this.handleChange} placeholder="Email"/>
                             </td>
                             <td>
                                 Gender 

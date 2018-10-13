@@ -22,11 +22,11 @@ class MembersController extends Controller
         }
         $surname = $request->input('surname');
         if (!empty($surname)) {
-            $query->where('firstname', 'like', '%'.$surname.'%');
+            $query->where('surname', 'like', '%'.$surname.'%');
         }
         $email = $request->input('email');
         if (!empty($email)) {
-            $query->where('firstname', 'like', '%'.$email.'%');
+            $query->where('email', 'like', '%'.$email.'%');
         }
         return $query->paginate(15);
     }
