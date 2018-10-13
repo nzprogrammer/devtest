@@ -47,9 +47,6 @@ class Main extends Component {
         let queryUrl = '/api/members?firstname=' + document.getElementById("firstname").value;
         queryUrl += '&surname=' + document.getElementById("surname").value;
         queryUrl += '&email=' + document.getElementById("email").value;
-        console.log(document.getElementById("firstname").value);
-        console.log(document.getElementById("surname").value);
-        console.log(document.getElementById("email").value);
         fetch(queryUrl)
                 .then(response => {
                     return response.json();
