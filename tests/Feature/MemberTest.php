@@ -9,6 +9,15 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class MemberTest extends TestCase
 {
     /**
+     * A basic test example.
+     *
+     * @return void
+     */
+    public function testExample()
+    {
+        $this->assertTrue(true);
+    }
+    /**
      * A basic test.
      *
      * @return void
@@ -30,4 +39,6 @@ class MemberTest extends TestCase
                'current_page' => 1
             ]);
     }
+
+
 }
