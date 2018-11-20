@@ -54,8 +54,7 @@ class MembersController extends Controller
             $response['ct'][$month->year][] = [
                 'count' => $month->ct,
                 'month' => date(
-                    "F",
-                    strtotime($month->year . "-" . $month->month . "-1")
+                    "F", strtotime($month->year . "-" . $month->month . "-1")
                 )
             ];
         }
