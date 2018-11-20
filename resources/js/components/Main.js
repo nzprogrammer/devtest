@@ -88,9 +88,7 @@ class Main extends Component {
                 tooltips: {
                     callbacks: {
                         title: function (tooltipItem, data) {
-
                             //return data['labels'][tooltipItem[0]['index']]+"title";
-
                             return tooltipItem[0].xLabel;
                         },
                         label: function (tooltipItem, data) {
